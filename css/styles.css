@@ -615,12 +615,18 @@ img {
 .modal-close {
   width: 24px;
   height: 24px;
-  padding-bottom: 8px;
+  padding: 8px;
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   display: block;
   margin-left: auto;
   margin-bottom: 24px;
+}
+
+.close {
+  display: flex;
+  top: 0;
+  right: 0;
 }
 
 .is-hidden {
@@ -730,4 +736,11 @@ img {
   background-image: url(../images/check-min.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.modal-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
 }
