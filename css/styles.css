@@ -245,6 +245,16 @@ img {
   transition-timing-function: var(--cubic);
 }
 
+.online-btn {
+  position: relative;
+  display: flex;
+  width: 165px;
+  height: 40px;
+  border-radius: 4px;
+  border-color: transparent;
+  padding: 8px 24px;
+}
+
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--hover-color);
@@ -551,6 +561,11 @@ img {
 }
 
 .footer-soc-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
@@ -569,7 +584,7 @@ img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: var(--title-text-color);
+  background-color: var(--accent-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -582,6 +597,54 @@ img {
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   background-color: #31d0aa;
+}
+
+.footer-subscribe-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.online-field {
+  position: relative;
+}
+
+.online-input {
+  width: 264px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: transparent;
+}
+
+.online-label {
+  font-size: 12px;
+  line-height: 2;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.online-form {
+  position: relative;
+  display: flex;
+  gap: 24px;
+}
+
+.footer-icon-plane {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*-------MODAL-------*/
@@ -618,17 +681,24 @@ img {
   padding: 8px;
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  display: block;
   margin-left: auto;
   margin-bottom: 24px;
-}
-
-.close {
   display: flex;
-  top: 0;
-  right: 0;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms var(--cubic);
 }
 
+.close-icon {
+  position: absolute;
+}
+.modal-close:hover {
+  background-color: var(--hover-color);
+}
+
+.modal-close:hover .close-icon {
+  fill: var(--button-color);
+}
 .is-hidden {
   opacity: 0;
   visibility: hidden;
