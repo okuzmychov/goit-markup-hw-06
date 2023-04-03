@@ -737,7 +737,7 @@ img {
 .modal-input {
   width: 100%;
   height: 40px;
-  border: 1px solid var(--primery-text-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
   padding-left: 38px;
@@ -753,6 +753,7 @@ img {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  fill: var(--primery-text-color);
 }
 
 .modal-input:focus {
@@ -773,12 +774,13 @@ img {
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
+  display: block;
 }
 
 .modal-textarea {
   width: 100%;
   height: 120px;
-  border: 1px solid var(--primery-text-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 8px 16px;
   background-color: transparent;
@@ -786,6 +788,10 @@ img {
   font-size: 12px;
   line-height: 1.17;
   outline: none;
+}
+
+.modal-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .modal-textarea:focus {
@@ -807,12 +813,15 @@ img {
   color: var(--accent-color);
 }
 
+.modal-check {
+}
+
 .check-text::before {
   content: '';
   width: 16px;
   height: 16px;
   border-radius: 2px;
-  border: 1px solid var(--icon-fill);
+  border: 1px solid var(--primery-text-color);
   display: block;
   transition: background-color 250ms var(--cubic);
 }
