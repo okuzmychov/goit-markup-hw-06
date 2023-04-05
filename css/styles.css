@@ -36,7 +36,8 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   margin: 0;
 }
 
@@ -59,11 +60,16 @@ img {
 }
 
 .container {
-  width: 1158px;
+  width: 100%;
+  flex-wrap: wrap;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  /*outline: 2px solid red;*/
+}
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 /*---------- HEADER ---------- */
@@ -263,8 +269,7 @@ img {
 /*---------- Advantages ---------- */
 
 .studio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 96px 0px;
 }
 
 .studio-title {
@@ -273,7 +278,6 @@ img {
 
 .studio-icon-list {
   display: flex;
-  gap: 24px;
 }
 .studio-icon-item {
   width: 264px;
@@ -291,39 +295,45 @@ img {
 }
 
 .studio-item {
-  width: calc((100% - 72px) / 4);
+  width: 100%;
 }
 
 .studio-list,
 .work-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .studio-text,
 .pictures-item {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
   color: var(--primery-text-color);
+  text-align: center;
 }
 
 .studio-link,
 .pictures-text {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin: 0;
   color: var(--title-text-color);
-  margin-bottom: 8px;
+  margin-bottom: 72px;
+  /* align-self: stretch; */
+  flex-grow: 0;
 }
 
 /*---------- What are we doing ---------- */
 
 .work {
-  padding-bottom: 120px;
+  /* padding-bottom: 120px; */
 }
 
 .section-title {
@@ -336,6 +346,18 @@ img {
   margin-bottom: 72px;
 }
 
+.work-container {
+}
+
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.work-item {
+  width: 100%;
+}
 /*---------- Team ---------- */
 
 .team {
@@ -348,10 +370,14 @@ img {
 
 .team-list {
   display: flex;
+  flex-wrap: wrap;
+  padding-top: 120px;
   gap: 24px;
 }
 .team-item {
-  width: calc((100% - 72px) / 4);
+  width: 100%;
+  padding-left: 82px;
+  padding-right: 82px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
@@ -841,3 +867,8 @@ img {
   transform: translate(-50%, -50%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+/* @media screen and (min-width: 480px) {
+  .conteiner-ada {
+    max-width: 480px;
+  }
+} */
